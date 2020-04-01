@@ -1,3 +1,16 @@
+import re
+
+def getTime():
+    return str(datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S"));
+
+def generateTime(t, fmt = 'Y-m-d H:i:s'):
+    try:
+        ddd = t.split(' ')[0];
+        ttt = t.split(' ')[1];
+        return '<time datetime="' + ddd + 'T' + ttt + '.000Z" data-format="' + fmt + '">' + t + '</time>';
+    except:
+        return t;
+
 def markdown(content):
     content = html.escape(content);
     content = re.sub('\r', '', content);

@@ -1,7 +1,8 @@
 import re
+from datetime import *
 
 def getTime():
-    return str(datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S"));
+    return str(datetime.today().strftime("%Y-%m-%d %H:%M:%S"));
 
 def generateTime(t, fmt = 'Y-m-d H:i:s'):
     try:
